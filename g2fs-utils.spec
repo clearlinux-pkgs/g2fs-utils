@@ -4,10 +4,10 @@
 #
 Name     : g2fs-utils
 Version  : 3.2.0
-Release  : 1
+Release  : 2
 URL      : https://pagure.io/gfs2-utils/archive/3.2.0/gfs2-utils-3.2.0.tar.gz
 Source0  : https://pagure.io/gfs2-utils/archive/3.2.0/gfs2-utils-3.2.0.tar.gz
-Summary  : No detailed summary available
+Summary  : tools needed to create, check, manipulate and analyze gfs2 filesystems
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
 Requires: g2fs-utils-bin = %{version}-%{release}
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582350345
+export SOURCE_DATE_EPOCH=1582350697
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -101,7 +101,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1582350345
+export SOURCE_DATE_EPOCH=1582350697
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/g2fs-utils
 cp %{_builddir}/gfs2-utils-3.2.0/doc/COPYING.applications %{buildroot}/usr/share/package-licenses/g2fs-utils/06877624ea5c77efe3b7e39b0f909eda6e25a4ec
